@@ -1,0 +1,55 @@
+@startuml
+autonumber
+
+actor parent as User
+boundary "vue_profil" as view_p
+
+boundary "vue_modifier_email" as View_modifier_email
+control "contrôleur" as Controller
+entity "user" as Database
+ User -> view_p:Cliquer sur modifier email
+view_p -> View_modifier_email : Appeler la page modifier email
+View_modifier_email --> User:  Afficher la page modifier email
+
+User-> View_modifier_email : Remplir le formulaire et Clique sur le bouton 'Continuer'
+View_modifier_email-> View_modifier_email: Vérifie les entrées
+
+alt Entrées invalides
+    View_modifier_email--> User : Remplire les champs
+else
+    View_modifier_email-> Controller : VerifEmail()
+    Controller -> Database : VerifEmail()
+    Database --> Controller : Resultat()
+
+    alt Email existe dans la base de données
+        Controller --> View_modifier_email: ResultatErreur()
+View_modifier_email-->User : AfficherErreur()
+
+View_modifier_email-->User : Remplire les champs
+    else
+ View_modifier_email-> Controller : Verif_mot_de_passe()
+          Controller ->Database :Verif_mot_de_passe()
+          Database --> Controller : Resultat()
+
+        alt Mot de passe incorrect
+            Controller --> View_modifier_email: ResultatErreur()
+View_modifier_email-->User : AfficherErreur()
+
+View_modifier_email-->User : Remplire les champs 
+   else
+
+            View_modifier_email-> Controller : modifier_email()
+            Controller -> Database :modifier_email()
+           Database --> Controller : Resultat()
+          
+
+    
+                 Controller --> View_modifier_email: ResultatSucces()
+
+             
+                View_modifier_email--> User : Redirige vers la page du profil
+          
+        end
+    end
+end
+@enduml

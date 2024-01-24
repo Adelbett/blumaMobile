@@ -1,0 +1,30 @@
+
+
+@startuml
+autonumber 
+actor parent as User
+boundary "vue_bienvenue" as View_b
+
+boundary "vue_connexion" as View
+control "contrôleur" as Controller
+entity      User as model
+
+
+User -> View_b: cliquer sur le bouton se connecter
+View_b ->View:Appeler la page conexion
+View --> User  : Affiche l'interface d'inscription 
+User -> View : Saisit l'adresse e-mail et le mot de passe
+User -> View : Clique sur le bouton "Se connecter"
+View -> Controller  : Envoyerinfo()
+Controller -> model: Envoyerinfo()
+model-> model: verficationinfo()
+
+model--> Controller :   
+alt  données sont incorrectes
+      Controller --> View : ResultatErreur()
+      View-->User  : Remplire_les_champs()
+else  données sont correctes
+       Controller --> View : ResultatSucces()
+       View --> User : Redirige vers la page d'accueil
+end
+@enduml

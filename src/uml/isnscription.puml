@@ -1,0 +1,35 @@
+@startuml
+autonumber
+actor Administrateur as Admin
+boundary "vue_sidebar " as Views
+boundary "vue_inscription" as View
+control "contrôleur" as Controller
+entity "User" as Database
+
+Admin -> Views : Cliquer sur inscription
+ Views -> View :  Appeler l'interface inscription
+
+View --> Admin: Affiche l'interface Inscription
+Admin -> View : Clique sur le bouton AddData
+View --> Admin: Affiche le formulaire d'inscription
+
+Admin -> View : Remplit le formulaire
+Admin -> View : Clique sur le bouton "save changes"
+View -> View : Vérifie les champs
+
+alt Entrées invalides
+    View --> Admin :Remplire les champs
+else
+    View -> Controller : Ajout_inscription()
+    Controller -> Database:  Ajout_inscription()
+    Database--> Controller : Resultat() 
+
+            
+                 Controller --> View: Resultat()
+
+                       View--> Admin:alerte de succès (Inscription ajouter avec succès)
+
+            
+
+end
+@enduml

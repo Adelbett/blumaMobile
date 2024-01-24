@@ -1,0 +1,130 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.prof-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 111px;
+    height: 92px;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #526ff7;
+}
+
+h4 {
+    color: #526ff7;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+p {
+    color: #787575;
+    font-weight: 500;
+    margin: 0;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-size: 1.5rem;
+    color: #526ff7;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.text:hover {
+    color: #2c5282;
+    transform: scale(1.2);
+}
+
+ion-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+// .no-results {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: calc(47vh - 325px);
+
+
+//     /* ajuster la hauteur en fonction de la taille de votre contenu */
+// }
+.no-results {
+    text-align: center;
+}
+
+
+// .no-results img {
+//     display: block;
+//     margin: 0 auto;
+//     width: 50%;
+// }
+
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not-found-container div {
+    margin-bottom: 15px;
+}
+
+.photo img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+    .prof-list {
+        grid-template-columns: 1fr;
+    }
+}

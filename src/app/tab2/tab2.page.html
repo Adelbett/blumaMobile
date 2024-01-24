@@ -1,0 +1,62 @@
+<ion-content class="toto">
+  <div class="header">
+    <ion-title>messagerie</ion-title>
+  </div>
+  <div (click)="showSearchList = true">
+    <ion-searchbar placeholder="Rechercher ...." (ionChange)="filterProf($event)"></ion-searchbar>
+    <ng-container *ngIf="showSearchList">
+      <ion-list *ngFor="let item of filteredProf">
+        <ion-item [routerLink]="['/chat', item?.id]">
+          <ion-avatar slot="start">
+            <img [src]="item?.image">
+          </ion-avatar>
+          <ion-label>
+            <h3>
+              {{ item?.nom }} {{ item?.prenom }}
+            </h3>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ng-container>
+  </div>
+
+  <ion-list-header>
+    vos contact
+  </ion-list-header>
+  <ion-list>
+    <ion-item [routerLink]="['/chat','admin']">
+      <ion-avatar slot="start">
+        <img src="../../assets/logo.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          Administration
+        </h3>
+        <p class="message">
+          <ion-text>
+            message
+          </ion-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list *ngFor="let item of prof?.data">
+
+    <ion-item [routerLink]="['/chat', item?.id]">
+      <ion-avatar slot="start">
+        <img [src]="item.image">
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          {{ item.nom }} {{item.prenom}}
+        </h3>
+        <p class="message">
+          <ion-text>
+            message
+          </ion-text>
+        </p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

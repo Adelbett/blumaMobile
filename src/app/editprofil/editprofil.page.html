@@ -1,0 +1,56 @@
+<ion-content>
+
+  <div class="header">
+    <ion-icon routerLink="/tabs/tab4" name="chevron-back-outline">
+    </ion-icon>
+
+    <div class="profil">
+      <p> modifier le compte
+      </p>
+    </div>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="enregstrier()" *ngIf="loginForm">
+    <div class="photo">
+      <div class="card-img">
+        <img class="image" src="../../assets/93691562_2643355309230703_6874984163938664448_n.jpg">
+      </div>
+      <ion-fab-button>
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-fab-button>
+    </div>
+
+
+
+
+    <div class="name">
+      <P>nom</P>
+      <ion-input formControlName="nom" type="text" [value]="user?.nom ">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-input>
+    </div>
+    <div class="prenon">
+      <P>Prenom</P>
+      <ion-input class=" " formControlName="prenom" type="text" [value]="user?.prenom "><ion-icon
+          name="person-outline"></ion-icon></ion-input>
+    </div>
+    <div class="date">
+      <P>Date de naissance </P>
+      <ion-input class=" " type="date" formControlName="date"
+        [value]="user?.date_naissance | date:'yyyy-MM-dd'"><ion-icon name="calendar-outline"></ion-icon></ion-input>
+    </div>
+    <div class="telephone">
+      <P>telephone</P>
+      <ion-input class=" " type="number" formControlName="tel" [value]="user?.num_tel "><ion-icon
+          name="call-outline"></ion-icon></ion-input>
+    </div>
+
+    <div class="enregstrier">
+      <ion-button class="btn2" type="submit">
+        <P class="tbtn2">Continue</P>
+      </ion-button>
+    </div>
+
+  </form>
+
+
+</ion-content>

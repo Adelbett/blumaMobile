@@ -1,0 +1,116 @@
+.header_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+ion-content {
+    .body {
+        margin-top: 0px;
+        margin-bottom: 70px;
+        // max-height: calc(100vh - 170px);
+        // overflow-y: scroll;
+
+        // overflow-y: scroll;
+        // margin-bottom: 20px;
+        .empty_state {
+            height: 100%;
+            display: flex;
+
+            .emptycontent {
+                margin: auto;
+                margin-top: 199px;
+
+                .emptyimg {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    margin: auto;
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+
+                .emptytext {
+                    margin-top: 15px;
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+            }
+        }
+
+
+        .chat {
+
+            // overflow-y: auto;
+            // max-height: calc(160vh - 220px);
+            padding: 10px;
+            // margin-bottom: 112px;
+        }
+
+        .buyer {
+            padding: 13px;
+            color: white;
+            border-radius: 30px;
+            border-bottom-right-radius: 3px;
+            box-shadow: 2px 5px 7px 3px #bac8d394;
+            margin-left: 2px;
+            background-color: #526FF7;
+        }
+
+        .user {
+            padding: 13px;
+            color: white;
+            border-radius: 30px;
+            border-bottom-left-radius: 3px;
+            background-color: var(--ion-color-green);
+            background-color: #526FF7;
+        }
+
+        .date {
+            font-size: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: grid;
+        }
+
+        ion-badge {
+            padding: 6px 9px;
+            border-radius: 6px;
+            font-weight: 400;
+            font-size: 15px;
+            box-shadow: 1px 1px 3px #00000029;
+            max-width: 100%;
+        }
+
+    }
+
+
+}
+
+ion-footer {
+    position: fixed;
+    /* margin-top: 17px; */
+    z-index: 1;
+    bottom: 0;
+    /* padding: 10px; */
+    width: 100%;
+    justify-content: space-between;
+    background-color: white;
+
+    ion-input {
+        margin: auto;
+        margin-left: 37px;
+        width: 89%;
+        height: 49px;
+        border-radius: 25px;
+        background-color: var(--ion-color-light);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+}

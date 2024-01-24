@@ -1,0 +1,53 @@
+<ion-content color="light" class="ion-padding">
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="hello">
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img [src]="user?.image">
+      </ion-avatar>
+      <ion-label>
+        <p> Salut ,👋</p>
+        <h3> {{user?.nom}} {{user?.prenom}} </h3>
+      </ion-label>
+      <ion-icon name="notifications-outline" routerLink='/notification'></ion-icon>
+
+    </ion-item>
+
+  </div>
+
+
+  <!-- item emploi de temps -->
+  <div class="emploi">
+    <h1>Emploi</h1>
+
+  </div>
+  <div class=" buttom-section " routerLink="/calender">
+
+    <div class="calender">
+      <div>
+        <h2>emploi de temps</h2>
+      </div>
+      <div class="content">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <p>{{currentDate}}</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACm0lEQVR4nO2aW2sTQRTH9wvox7D1ySf1A3Q3iXvShWZmG7FKRaog+OKTtwrpi/YbCKJEUi+9oKJQW+nlA1j0Tbat4osmFmIatYgPujkyC2mmAd1LNt3den7wf5uZnvPv7JkTOIpCEARBEAThAVXPH0yBeU4FdimOErGlsrleJWxS2VyvCnxZA45JkApsKZ02e0JJXtPZUQ3Y16iT8i2d11NgHuko+UxmaL8KvNI8NGPk8frYON6+W8I7xfuxkohpdOymE2PLBFY2DGNfYANU3bzWPCx3/DSurb/HuLO69g4H8sPybbjSgQH8dfOguZdLmBRm5xdkA1YCG6DpbKt5UG2z/tc/eG9iEvmJM1h6MOU5yHJlA0fOX3RU+bzhK0G3vSLW7YKo8+/BDYBWUfkXBjvprDH4Kc9JTD9+tn32zJPnvgzwsleOvesGFEsPsZ8NYXHika//4vDIBUdBboDb3l01II6QARDyDZiceZoohW6AlmCRAUHRJBejbnX9ioog0DOI1AdAlxqhaqWB1hvbVWKdzKvl354k8+mD7WmPWLdrjVCVDGjQDbDoE7CpBlhUBG16BSx6Bm3qA6z/rRFKAmQA0A3Arn0CP7YazvftJrFOxsue9rrxdsXG6Vu/XCXWxf7HkOVhj5CMSG7w0E9XiXVkgATdAKBPAKkGABVBpFcA6BlE6gNCGZGpbSamE6x+qbVGZIB9C2VI6sX8IiaF2bmQhqRUYFflMTkxghZ3rNX1HWNyqm5e7mhQUtNZuXmYGEIcLdxwpsKiHoBol4hJxJbuH5SuP//Y0aCkQIybirHTqIccfEvn9b7swGElDNJps0fT+WLkSXnXQt+x/IFQkm83QgV2VgNW0ICPx0usIGLrSuIEQRAEQSh7kT/xh1JluV6TxwAAAABJRU5ErkJggg==">
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!--- les prof--->
+  <app-prof></app-prof>
+</ion-content>

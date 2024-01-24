@@ -1,0 +1,17 @@
+@startuml
+autonumber
+actor Utilisateur as User
+boundary "vue_enfant" as View
+control "contrôleur" as Controller
+entity "User" as Database
+
+
+User -> View : Choisir l'interface enfant
+View --> User : Afficher l'interface enfant
+User -> View : Sélectionne un enfant
+View -> Controller : Detail(id_user_eleve)
+Controller -> Database : vérifier()
+Database --> Controller : Resultat()
+Controller --> View : Detaille()
+View --> User : Affiche les informations de l'élève inscrit et leurs Détailles
+@enduml

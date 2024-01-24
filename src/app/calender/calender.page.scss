@@ -1,0 +1,35 @@
+.cal-event-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cal-event-time {
+    font-size: 14px;
+    color: #999;
+}
+
+.scroll-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    contain: size style layout;
+    margin-top: 56px !important;
+    margin-bottom: 56px !important;
+
+}
+
+.weekview-normal-event-container {
+    margin-top: 37px;
+}
+
+.weekview-allday-table {
+    display: none;
+}

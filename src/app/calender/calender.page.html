@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-icon routerLink="/tabs/tab1" name="chevron-back-outline" class="retour">
+        </ion-icon>
+        <ion-title>
+            emplois de temps
+        </ion-title>
+        <ion-buttons slot="end">
+
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content scroll-y="true">
+
+    <ion-row>
+        <!-- Move back one screen of the slides -->
+        <ion-col size="2">
+            <ion-button fill="clear" (click)="back()">
+                <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-col>
+
+        <ion-col size="8" class="ion-text-center">
+            <h2>{{ viewTitle }}</h2>
+        </ion-col>
+
+        <!-- Move forward one screen of the slides -->
+        <ion-col size="2">
+            <ion-button fill="clear" (click)="next()">
+                <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+            </ion-button>
+        </ion-col>
+    </ion-row>
+    <div class="scroll-content">
+        <calendar [startHour]="8" [endHour]="24" [eventSource]="eventSource" [calendarMode]="calender.mode"
+            [currentDate]="calender.currentDate" (onTitleChanged)="onViewTitleChanged($event)"
+            (onEventSelected)="showPopover($event)" (onDateSelected)="showPopover($event)">
+        </calendar>
+    </div>
+
+</ion-content>

@@ -1,0 +1,28 @@
+@startuml
+autonumber 1.1.1
+
+
+actor Administrateur as Admin
+boundary "vue_sidebar " as Views
+boundary "vue_formation" as View
+control "contrôleur" as Controller
+entity "User" as Database
+
+    Admin -> Views : Cliquer sur formation
+    Views -> View : Appeler l'interface Formation
+View --> Admin: Afficher l'interface enfant
+
+Admin -> View: Clique sur le bouton AddData
+View --> Admin: Affiche le tableau de formation
+Admin -> View : Sélectionner matière , niveau et cout
+Admin -> View : Clique sur le bouton Save changes
+View -> Controller :ajout_formation()
+Controller ->  Database: ajout_formation()
+Database --> Controller : Resultat()
+
+ 
+         
+                 Controller --> View: Resultat()
+
+                       View--> Admin:alerte de succès (Formation ajouter avec succès)
+@enduml

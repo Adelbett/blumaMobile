@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-icon routerLink="/fgpassword" name="chevron-back-outline" class="retour"></ion-icon>
+
+
+</ion-header>
+
+<ion-content>
+  <form>
+    <div class="codetitle">Code de verification</div>
+    <div class="codeA">entrez votre code de vérification ici</div>
+    <table>
+      <tr>
+        <td>
+          <ion-input type="text" id="otp1" #otp1 class="otp" pattern="[0-9]{6}" maxlength="1" size="1"
+            (keyup)="next(otp2)">
+          </ion-input>
+        </td>
+        <td>
+          <ion-input type="text" id="otp2" #otp2 class="otp" pattern="[0-9]{6}" maxlength="1" size="1"
+            (keyup)="next(otp3)">
+          </ion-input>
+        </td>
+        <td>
+          <ion-input type="text" #otp3 id="otp3" class="otp" pattern="[0-9]{6}" maxlength="1" size="1"
+            (keyup)="next(otp4)">
+          </ion-input>
+        </td>
+        <td>
+          <ion-input type="text" #otp4 id="otp4" class="otp" pattern="[0-9]{6}" maxlength="1" size="1">
+          </ion-input>
+        </td>
+      </tr>
+    </table>
+
+    <div class="boutton">
+      <ion-button class="btn2" type="submit" (click)="verifcode()">
+
+        <p class="tbtn2">envoyer</p>
+      </ion-button>
+    </div>
+
+  </form>
+  <div *ngIf="serverError " class="error-message">
+    Code incorrecte.
+  </div>
+</ion-content>

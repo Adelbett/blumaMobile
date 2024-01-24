@@ -1,0 +1,33 @@
+@startuml
+actor Enseignant as Teacher
+boundary "vue_sidebar " as Views
+boundary "vue_calendrier" as View
+control "contrôleur" as Controller
+entity "User" as Database
+
+Teacher-> Views : Cliquer sur Emploi
+Views -> View : Appeler l'interface calendrier
+View -> Teacher : Affiche l'interface Calendrier
+Teacher -> View : Choisi une date
+View -> View : Vérifie la date
+
+alt Date passée
+    View --> Teacher : rechoisir une  date
+else
+    View --> Teacher : Affiche le formulaire
+    Teacher -> View : Remplir le formulaire
+    Teacher -> View : Clique sur le bouton Valider
+    View -> View : Vérifie les champs
+
+    alt Champs non remplis
+        View --> Teacher :remplir le formulaire
+    else
+        View -> Controller :  ajouterSeanceProf()
+Controller -> Database :  ajouterSeanceProf()
+        Database -> Controller : Resultat()
+        Controller -> View : Resultatsucces()
+
+        View--> Teacher : alerte de succès (Formation ajouter avec succès)
+    end
+end
+@enduml

@@ -1,0 +1,27 @@
+<div class="content">
+
+  <div class="prof-list">
+
+    <div class="card" *ngFor="let item of prof">
+      <div class="card-img">
+        <img class="image" [src]='item?.cms_users_image'>
+      </div>
+      <div class="card-content">
+        <h3 class="name">{{item.cms_users_prenom}} {{item.cms_users_nom}}</h3>
+        <!-- <h4></h4> -->
+
+
+      </div>
+      <div class="text">
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+      </div>
+    </div>
+
+    <ng-container *ngIf="prof.length === 0" class="not-found-container">
+      <div class="photo">
+        <img src="../../assets/image/matiere/notfound.jpg">
+      </div>
+      <p class="no-results">Nous n'avons acune Professeur pour le moment pour cette formation.</p>
+    </ng-container>
+
+  </div>

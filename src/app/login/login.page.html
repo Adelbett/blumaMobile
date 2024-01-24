@@ -1,0 +1,58 @@
+<ion-content class="content">
+  <div class="blaka">
+    <img src="../../assets/log/undraw_login_re_4vu2 1.png" alt="">
+  </div>
+  <div class="text1">
+    <p>détails de connexion
+    </p>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="login()" *ngIf="loginForm">
+    <!--email-->
+
+    <div class="address">
+
+
+      <ion-input class=" " formControlName="email" placeholder="Your Email "><ion-icon name="mail-outline"></ion-icon>
+
+
+      </ion-input>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- password-->
+    <div class="password">
+
+      <ion-input class=" " type="password" formControlName="password" placeholder="Your  Password"><ion-icon
+          name="key-outline"></ion-icon></ion-input>
+
+    </div>
+
+    <div *ngIf="serverError" class="error-message">
+      Email ou mot de passe incorrect. Veuillez réessayer.
+
+    </div>
+
+
+    <div class="forgot">
+      <ion-button fill="clear" type="submit" class="btn1" routerLink="/fgpassword"> Mot de passe oublié
+        ?
+      </ion-button>
+    </div>
+    <div class="login">
+      <ion-button class="btn2" type="submit">
+        <P class="tbtn2">se connecter</P>
+      </ion-button>
+    </div>
+  </form>
+
+
+
+
+
+</ion-content>

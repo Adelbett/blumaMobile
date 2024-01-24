@@ -1,0 +1,42 @@
+<ion-content class="toto">
+  <div class="header">
+    <ion-title size="large">Vos Enfants</ion-title>
+  </div>
+
+  <swiper [slidesPerView]="3">
+    <ng-template fill="outline" lines="none" swiperSlide class="swiperSlide" *ngFor="let item of enf">
+      <ion-card (click)="detail(item?.id_user_eleve)">
+        <div class="wrapper">
+          <img [src]="item?.image" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+        </div>
+      </ion-card>
+      <div class="name">
+        <p>{{item?.prenom}}</p>
+      </div>
+    </ng-template>
+
+  </swiper>
+  <div class="inforamtion">
+    <p> information inscrit</p>
+  </div>
+
+  <div *ngFor="let item of detailinscription">
+    <div class="card">
+      <div class="card-img">
+        <img [src]="'http://38.242.201.117/bluma/public/'+item.matiere.image">
+      </div>
+      <div class="card-content">
+        <h3 class="name">{{item?.matiere?.nom}}</h3>
+        <h4> Séances étudiées : {{item?.nb_seance_etudier}}</h4>
+        <p class="text-muted"> Séances payées : {{item?.nb_seance_paye}}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</ion-content>

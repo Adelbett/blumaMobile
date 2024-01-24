@@ -1,0 +1,47 @@
+<ion-content>
+
+  <div class="header">
+    <ion-icon routerLink="/tabs/tab4" name="chevron-back-outline">
+    </ion-icon>
+
+    <div class="profil">
+      <p> Vos enfants
+      </p>
+    </div>
+  </div>
+
+
+  <ion-list>
+
+
+    <ion-item *ngFor="let item of enf" lines="none" class="ion-item">
+      <ion-card>
+        <div class="wrapper">
+          <img [src]="item?.image">
+        </div>
+      </ion-card>
+      <ion-label class="ion-text-wrap">
+        <h2>{{ item?.nom }} {{ item?.prenom }}</h2>
+      </ion-label>
+      <ion-button fill="clear" color="danger" (click)="delete(item.id)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  <!-- <form>
+    <div>
+      <p>ajouter un enfant</p>
+    </div>
+    <div class="email">
+      <p>email de votre enfant</p>
+      <ion-input type="email"> <ion-icon name="mail-outline"></ion-icon></ion-input>
+    </div>
+  </form>
+
+  <div class="enregstrier">
+    <ion-button class="btn2" type="submit" (ngSubmit)="resultat()">
+      <P class="tbtn2">enregstrier</P>
+    </ion-button>
+  </div> -->
+
+</ion-content>

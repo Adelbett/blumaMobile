@@ -1,0 +1,185 @@
+ion-content {
+    width: 100%;
+    background-color: #f2f4f3 !important;
+
+}
+
+.logout {
+    ion-icon {
+        color: #ff5252;
+    }
+
+    ion-label {
+        color: #ff5252;
+
+    }
+}
+
+//setting
+.setting p {
+    font-size: 24px;
+
+    margin-left: 13px;
+
+    letter-spacing: -0.3px;
+    color: #000000;
+}
+
+
+//ion-toolbar
+ion-toolbar {
+
+    position: relative;
+
+
+    ion-label {
+        width: 100%;
+
+        h2 {
+            position: relative;
+            margin-top: 14px;
+            margin-bottom: 14px;
+            /* font-style: normal; */
+            /* font-weight: 600; */
+            /* line-height: 30px; */
+            letter-spacing: -0.3px;
+            color: #353535;
+            font-size: 33px;
+            justify-content: center;
+            display: flex;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+//ion-card edit profil
+.card {
+    margin-top: 14px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    padding: 10px;
+
+    align-items: center;
+
+
+
+    .card-img {
+
+        width: 106px;
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        vertical-align: middle;
+
+    }
+
+    .card-content {
+        margin-left: 20px;
+
+
+        h3 {
+
+            font-size: 22px;
+            height: 18px;
+        }
+
+        h4 {
+            color: #526ff7;
+            height: 9px;
+            font-size: 17px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+ion-item {
+
+    width: 100%;
+    margin-top: 10px;
+    border: 0.5px solid var(--ion-color-white);
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+    ion-label {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+
+        .info {
+            margin-top: 5px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: var(--ion-color-medium);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 20px;
+        }
+    }
+}
+
+
+
+.btn {
+    margin-top: 20px;
+    margin: auto auto 30px 4px;
+    display: flex;
+    justify-content: center;
+
+    .text {
+
+        left: 15px;
+    }
+}
+
+.exit {
+    //align-self: flex-end;
+    font-size: 25px;
+    font-weight: 600px;
+    //margin-right: 10px;
+
+    left: 60px;
+    color: var(--ion-color-white);
+}
+
+.exit_icon {
+
+    box-shadow: 1px 1px 3px #becde2, -3px -3px 5px #a6b0be10;
+    top: 20px;
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: var(--ion-color-primary);
+    border: 1px solid var(--ion-color-primary);
+    text-align: center;
+
+    .icon {
+        margin: 10px auto auto 6px;
+        font-size: large;
+        color: var(--ion-color-white);
+    }
+}

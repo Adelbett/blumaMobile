@@ -1,0 +1,39 @@
+<ion-content>
+  <div class="header">
+    <ion-icon routerLink="/tabs/tab4" name="chevron-back-outline">
+    </ion-icon>
+
+    <div class="profil">
+      <p> Change Email</p>
+    </div>
+  </div>
+
+  <form [formGroup]="forms" (ngSubmit)="enregistrer()">
+
+
+    <div class="old">
+      <P>Nouveau Adresse email</P>
+      <ion-input class=" " type="email" placeholder="toto123@gmail.com" formControlName="new_email">
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-input>
+
+    </div>
+    <div class="new ">
+      <P>Mot de passe</P>
+      <ion-input class=" " type="password" formControlName="password">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-input>
+
+    </div>
+    <div class="boutton">
+      <ion-button class="btn2" type="submit">
+        <P class="tbtn2">Continue</P>
+      </ion-button>
+    </div>
+  </form>
+  <div id="message-container"></div>
+
+
+
+
+</ion-content>

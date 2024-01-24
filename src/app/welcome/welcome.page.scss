@@ -1,0 +1,204 @@
+.container {
+
+    width: 100%;
+    // max-width: 375px;
+    height: 100%;
+    margin: 0 auto;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .h-100 {
+        height: 100%;
+    }
+
+    .cer-rouge {
+        position: absolute;
+        width: 50%;
+        /* height: auto; */
+        /* max-width: 598px; */
+        left: 50%;
+        transform: translateX(-50%);
+        top: 25%;
+    }
+
+    .img-famme {
+        position: absolute;
+        width: 100%;
+        height: auto;
+
+        left: 50%;
+        transform: translateX(-50%);
+        top: 16%;
+    }
+
+    .cer-blue {
+
+        width: 100%;
+        height: auto;
+        top: 10%;
+        position: absolute;
+        left: -49%;
+
+    }
+
+    .cer-jeune {
+        position: absolute;
+        width: 100%;
+        /* max-width: 102px; */
+        height: auto;
+        left: 47%;
+        top: 10%;
+    }
+
+    .text-wel {
+        position: absolute;
+        width: 80%;
+        /* max-width: 350px; */
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 73%;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.8rem;
+        /* line-height: 1.2; */
+        text-align: center;
+    }
+
+    .cer-jeune2 {
+        position: absolute;
+        /* width: 3.5%; */
+        max-width: 24px;
+        height: auto;
+        left: 14.5%;
+        top: 29%;
+    }
+
+    .cer-blue2 {
+        position: absolute;
+        // width: 3.5%;
+        max-width: 24px;
+        height: auto;
+        left: 82.5%;
+        top: 65%;
+    }
+
+    .buttom-suiv {
+        position: absolute;
+        width: 90%;
+        max-width: 335px;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+    }
+}
+
+
+
+
+// .container {
+//     position: absolute;
+//     width: 375px;
+//     height: 761px;
+//     left: 0px;
+//     top: 32px;
+// }
+
+// .cer-rouge {
+//     position: absolute;
+//     width: 188px;
+//     height: 188px;
+//     left: 56px;
+//     top: 296px;
+// }
+
+// .img-bluma {
+
+//     // position: absolute;
+//     width: 598px;
+//     height: 398px;
+//     left: -112px;
+//     top: 100px
+// }
+
+
+
+// .img-famme {
+//     position: absolute;
+//     width: 598px;
+//     height: 398px;
+//     left: -112px;
+//     top: 76px;
+
+// }
+
+// .cer-blue {
+//     position: absolute;
+//     width: 155px;
+//     height: 96px;
+//     left: -59px;
+//     top: 139px;
+// }
+
+// .cer-jeune {
+//     position: absolute;
+//     width: 102px;
+//     height: 184px;
+//     left: 302px;
+//     top: 67px;
+
+// }
+
+// .text-wel {
+//     position: absolute;
+//     height: 85px;
+//     left: 13.87%;
+//     right: 14.87%;
+//     top: 519px;
+
+
+//     font-family: 'Inter';
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 35px;
+//     line-height: 42px;
+//     text-align: center;
+//     text-transform: capitalize;
+
+
+// }
+
+// .cer-jeune2 {
+//     position: absolute;
+//     width: 24px;
+//     height: 24px;
+//     left: 65px;
+//     top: 216px;
+// }
+
+// .cer-blue2 {
+//     position: absolute;
+//     width: 24px;
+//     height: 24px;
+//     left: 319px;
+//     top: 500px;
+
+// }
+
+// .buttom {
+//     position: absolute;
+//     width: 335px;
+//     height: 54px;
+//     left: 21px;
+//     top: 669px;
+// }
+
+// .page-header {
+//     margin-top: 0;
+// }

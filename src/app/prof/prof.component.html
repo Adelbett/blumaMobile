@@ -1,0 +1,49 @@
+<div class="niveaux">
+  <h1>Nos Niveaux</h1>
+</div>
+
+<swiper [slidesPerView]="2.5" [loop]="false">
+  <ng-template fill="outline" lines="none" swiperSlide class="swiperSlide" *ngFor=" let niveau of niveaux">
+    <ion-card (click)="filterfunction(niveau.id)">
+
+      <div class="wrapper">
+
+      </div>
+      <p class="name-mat">{{niveau.nom}}</p>
+
+
+
+    </ion-card>
+  </ng-template>
+
+</swiper>
+
+
+
+
+
+<div class="content">
+
+
+  <div class="formation">
+    <h1>Nos formations</h1>
+  </div>
+
+  <ng-container>
+
+
+
+    <div class="prof-list">
+      <div *ngFor="let item of formation">
+        <div class="card">
+          <div class="card-img" routerLink="/details/{{item.id}}">
+            <img class="image" [src]="item.matiere_image">
+          </div>
+          <div class="card-content">
+            <h3 class="name">{{item.matiere_nom}}</h3>
+            <h4>{{item.cout}} TND</h4>
+            <p class="text-muted">{{item.niveau_nom}}</p>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,65 @@
+<ion-content>
+  <div class="header">
+    <ion-icon routerLink="/tabs" name="chevron-back-outline">
+    </ion-icon>
+    <img [src]="formation?.matiere_image">
+  </div>
+
+
+  <div class="container">
+
+    <div class="divformation">
+      <div class="formation">
+        <h3 class="name"> {{formation?.matiere_nom}}</h3>
+        <p> Formation </p>
+
+      </div>
+      <div class="Niveaux">
+        <h3 class="name"> {{formation?.niveau_nom}}</h3>
+        <p> Niveaux </p>
+      </div>
+      <div class="Prix">
+        <h3>{{formation?.cout}} DT </h3>
+        <p> Prix </p>
+      </div>
+    </div>
+    <div class="Professeur">
+      <h1>Enseignant</h1>
+    </div>
+    <div>
+      <app-profmatiere *ngIf="id_matiere && id_niveau" [id_niv]="id_niveau" [id_mat]="id_matiere"></app-profmatiere>
+
+    </div>
+
+
+  </div>
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="tabs">
+  <div class="tab1" [ngClass]="{'active': active === 'tab1'}" (click)="activetab('tab1')">
+    prof</div>
+  <div class="tab2" [ngClass]="{'active': active === 'tab2'}" (click)="activetab('tab2')">calendrier</div>
+</div>
+
+<div class="tab1block" *ngIf="active === 'tab1'">
+  <div class="compound" [ngClass]="{'show': active === 'tab1'}">
+    <app-profmatiere *ngIf="id_matiere && id_niveau" [id_niv]="id_niveau" [id_mat]="id_matiere"></app-profmatiere>
+  </div>
+</div>
+
+<div class="tab1block" *ngIf="active === 'tab2'">
+
+</div> -->
